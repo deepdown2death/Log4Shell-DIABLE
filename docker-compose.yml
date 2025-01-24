@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  vuln_app:
+    image: eddycaron/diable:log4shell_vuln_app
+    build:
+      context: .
+      dockerfile: Dockerfile.log4shell
+    networks:
+      mynetwork:
+        ipv4_address: 172.25.0.10
+
+  attacker:
+    image: eddycaron/diable:log4shell_attacker
+    build:
+      context: .
+      dockerfile: Dockerfile.attacker
+    networks:
+      mynetwork:
+        ipv4_address: 172.25.0.20
+    depends_on:
+      - vuln_app
+
+networks:
+  mynetwork:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16
