@@ -159,17 +159,3 @@ Le fichier `exploit.py` agit comme un serveur LDAP malveillant. Voici ce qu'il f
 ## Avertissement
 
 **L'utilisation de ce projet pour exploiter des systèmes sans autorisation est strictement interdite.** Assurez-vous de toujours avoir les droits nécessaires avant d'utiliser des outils de sécurité offensive.
-
-Ma contribution dans le projet DIABLE :
-
-J’ai créé une image docker vulnérable à Log4shell.
-
-J’ai créé une image docker qui va jouer le rôle de la machine de l’attaquant.
-
-J’ai créé un réseau pour que les deux conteneurs peuvent communiquer entre eux.
-
-J’ai créé un fichier .yml pour que l’utilisateur puissent construire les images docker localement.
-
-J’ai mis une flag dans le conteneur de l’application vulnérable pour faire preuve que la vulnérabilité est bien exploité.
-
-J’ai résolu une machine Hackropole : ‘**Welcome Admin 2/2**’. La solution es déjà publié sur le site : https://hackropole.fr/fr/writeups/fcsc2024-web-welcome-admin-2/6c3c4cdf-cac6-411e-a7de-f67cee7b857c/
